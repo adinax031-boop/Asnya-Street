@@ -16,3 +16,10 @@ Requires Node 22+. No dependencies or install step. Run `npm test`, `npm run bui
 
 ## Financial Core: Portfolio desk
 Add and edit long holdings (quantity, average cost, manually entered current price) and cash in USD. Inspect value, unrealized P&L, allocation and largest-position concentration. Run all-holdings or single-holding price shocks; cash remains unchanged. Import/export validated version-1 JSON; browser-local persistence. A fictional example is provided. No market data feed is connected; there is no transaction history, FX conversion, fees, taxes, or cash-flow-adjusted return calculation. Stress tests are deterministic scenarios, not probability or liquidity estimates.
+
+## Asnya Research · Jupyter workspace
+
+[Open research notebook](research/01_strategy_research.ipynb) · [Run in Colab](https://colab.research.google.com/github/adinax031-boop/Asnya-Street/blob/main/research/01_strategy_research.ipynb)
+
+A standalone Python notebook with supplied CSV or seeded synthetic prices, training-only parameter selection, frozen chronological holdout, transaction costs, charts and exported evidence. See [research setup](research/README.md) for JupyterLab installation and automated execution. This runs in a Python kernel alongside the browser terminal; the static hosted site does not provide remote kernels.
+
