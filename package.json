@@ -1,0 +1,1 @@
+{"name":"asnya-street","version":"0.2.0","private":true,"license":"MIT","engines":{"node":">=22"},"scripts":{"build":"node build.cjs","check":"node --check src/app.js && node --check src/engine.js","test":"npm run check && node build.cjs && node test.cjs && node --test infrastructure.test.cjs","dev":"node build.cjs && node serve.cjs","start":"node serve.cjs"}}

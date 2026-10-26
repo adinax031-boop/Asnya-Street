@@ -10,3 +10,6 @@ Serve `dist/` using any static web server. Run `node test.cjs` for engine checks
 
 ## License
 MIT — Copyright (c) 2026 Asnya Street contributors. Permission is granted, free of charge, to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software, provided this notice is retained. THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM OR DAMAGES ARISING FROM THE SOFTWARE OR ITS USE.
+
+## Development infrastructure
+Requires Node 22+. No dependencies or install step. Run `npm test`, `npm run build`, then `npm run dev`. Edit `src/` and commit generated `dist/` with source. GitHub Actions checks Node 22/24, engine behavior, build reproducibility, HTTP serving and generated-asset drift. See CONTRIBUTING.md. This does not add backend services, live data or brokerage connections.
