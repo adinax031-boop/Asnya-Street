@@ -13,3 +13,6 @@ MIT — Copyright (c) 2026 Asnya Street contributors. Permission is granted, fre
 
 ## Development infrastructure
 Requires Node 22+. No dependencies or install step. Run `npm test`, `npm run build`, then `npm run dev`. Edit `src/` and commit generated `dist/` with source. GitHub Actions checks Node 22/24, engine behavior, build reproducibility, HTTP serving and generated-asset drift. See CONTRIBUTING.md. This does not add backend services, live data or brokerage connections.
+
+## Financial Core: Portfolio desk
+Add and edit long holdings (quantity, average cost, manually entered current price) and cash in USD. Inspect value, unrealized P&L, allocation and largest-position concentration. Run all-holdings or single-holding price shocks; cash remains unchanged. Import/export validated version-1 JSON; browser-local persistence. A fictional example is provided. No market data feed is connected; there is no transaction history, FX conversion, fees, taxes, or cash-flow-adjusted return calculation. Stress tests are deterministic scenarios, not probability or liquidity estimates.
