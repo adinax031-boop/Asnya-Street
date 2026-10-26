@@ -17,3 +17,26 @@ jobs:
       - run: npm run build
       - name: Verify generated assets match source
         run: git diff --exit-code -- dist/
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: research/requirements.txt
+      - run: python -m pip install -r research/requirements.txt
+      - run: python research/test_research.py
+      - run: python research/build_notebook.py
+      - run: git diff --exit-code -- research/01_strategy_research.ipynb
+      - run: python research/execute_notebook.py ${{ runner.temp }}/asnya-research
+        env:
+          MPLBACKEND: Agg
+      - uses: actions/upload-artifact@v4
+        with:
+          name: asnya-research-evidence
+          path: ${{ runner.temp }}/asnya-research
+          retention-days: 7
+
